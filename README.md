@@ -173,3 +173,102 @@
 - `animation-direction`
 - `animation-fill-mode`
 - Shorthand: `animation: name duration timing-function delay iteration-count direction fill-mode`
+
+# SCSS
+
+## 19. SCSS (Sass)
+SCSS is a preprocessor scripting language that is interpreted or compiled into CSS. It's a more powerful version of CSS with additional features.
+
+### Project Structure
+```
+SCSS/
+  ├── main.scss      # Main SCSS file that imports other files
+  ├── vars.scss      # Variables and configuration
+  └── functions.scss # Custom functions and mixins
+```
+
+### Key SCSS Features
+
+1. **Variables**
+```scss
+// Defined in vars.scss
+$primary-color: #333;
+$spacing: 20px;
+```
+
+2. **Nesting**
+```scss
+nav {
+  background: #fff;
+  ul {
+    margin: 0;
+    li {
+      display: inline-block;
+    }
+  }
+}
+```
+
+3. **Partials and Import**
+```scss
+// In main.scss
+@import 'vars';
+@import 'functions';
+```
+
+4. **Mixins**
+```scss
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-div {
+  @include flex-center;
+}
+```
+
+5. **Functions**
+```scss
+@function calculate-width($n) {
+  @return $n * 100px;
+}
+```
+
+6. **Extending/Inheritance**
+```scss
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.success {
+  @extend %message-shared;
+  color: green;
+}
+```
+
+7. **Operators**
+```scss
+.container {
+  width: 100% - 20px;
+}
+```
+
+8. **Color Functions**
+```scss
+$base-color: #333;
+.dark {
+  color: darken($base-color, 10%);
+}
+```
+
+### Best Practices
+1. Use variables for repeated values
+2. Break code into modular files
+3. Use meaningful names for variables and mixins
+4. Keep nesting to a maximum of 3 levels
+5. Use mixins for reusable style blocks
+6. Comment your complex functions and mixins
+7. Follow a consistent naming convention
