@@ -1,5 +1,5 @@
 # CSS Learning Notes
-![CSS Notes](https://drive.google.com/file/d/1uqknlijZ9zT5pNRW7Oyw-Gl2dyS2MUX0/view?usp=sharing)
+📑 [View My Detailed CSS Notes (PNG)](https://drive.google.com/file/d/1uqknlijZ9zT5pNRW7Oyw-Gl2dyS2MUX0/view?usp=sharing)
 
 ## 1. What is CSS?
 - CSS (Cascading Style Sheets) is a styling language used to describe the presentation of HTML documents
