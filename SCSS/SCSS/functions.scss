@@ -1,0 +1,9 @@
+$font-size : (
+    "small" :12px,
+    "mini" : 11px,
+    "medium" : 25px,
+    "large": 30px,
+);
+@function get_size($font-size_type){
+    @return map-get($font-size, $font-size_type );
+}

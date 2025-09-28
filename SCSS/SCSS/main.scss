@@ -1,0 +1,64 @@
+
+
+//normal css vars
+// :root{
+//     --primary-color : #275757;
+//     --secondary-color: #525254;
+// }
+
+//scss vars
+// $primary-color : #275757;
+// $secondary-color: #525254;
+// $font-weights : (
+//     "regular" : 299,
+//     "medium": 499,
+//     "large" : 699,
+// );
+
+@mixin flex-area{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    gap: 12px;
+}
+@mixin flex-direc($direc){
+    flex-direction: $direc;
+}
+
+
+@import "vars";
+
+//function
+@import "functions";
+
+.title{
+    color: $primary-color;
+}
+body {
+  background-color: $secondary-color;
+}
+
+.main{
+    @include flex-area;
+    @include flex-direc(column);
+    margin : 15px;
+    padding : 20px;
+    background-color: #fff;
+    // p{
+    //     background-color: aquamarine ;
+    //     font-weight: map-get($font-weights, "regular" );
+    // }
+    // .main_para_1{
+    //       background-color: aquamarine ;
+    //       font-weight: map-get($font-weights, "regular" );
+    // }
+
+    &_para_1{
+          background-color: rgb(115, 135, 128) ;
+          font-weight: map-get($font-weights, "regular" );
+    }
+
+    .main_para_2{
+        font-size: get-size(large);
+    }
+}
