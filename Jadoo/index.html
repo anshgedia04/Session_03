@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadoo</title>
+</head>
+
+<body>
+    <div class="relative max-w-[100rem] max-h-[3500px] mx-auto">
+        <img src="./src/images/decore.png" alt="decore"
+            class="absolute top-0 -right-48 -z-10 w-[950.306884765625px] h-[750.584228515625px] hidden lg:block -z-50" />
+        <!-- plane-section -->
+        <img src="./src/images/plane_hero.png" alt="plane"
+            class="hidden lg:block absolute w-[137.29419758762032px] h-[95.23176080542638px] -rotate-[6deg] top-[161px] left-[698px] translate-x-6 scale-110 translate-y-6">
+        <img src="./src/images/plane_hero.png" alt="plane"
+            class="hidden lg:block absolute w-[137.29419758762032px] h-[95.23176080542638px] -rotate-[6deg] top-[208px] left-[1182px] -z-40 translate-y-8 translate-x-5 scale-110">
+        <!-- plane-section -->
+        <!-- Header -->
+        <header
+            class="relative w-full max-w-[90%] md:max-w-[85%] lg:w-[1160.5799560546875px] h-auto md:h-[80px] top-[10px] md:top-[20px] left-1/2 -translate-x-1/2 lg:left-[140.92px] lg:translate-x-0 py-4 px-4 md:px-0 z-50">
+            <div class="flex items-center justify-between h-full w-full">
+                <!-- Logo -->
+                <div class="relative flex items-center">
+                    <img src="./src/images/Jadoo.png" alt="Jadoo logo"
+                        class="h-[25px] w-[85px] md:h-[30px] md:w-[100px] lg:h-[33.99400329589844px] lg:w-[114.91194915771484px] z-20" />
+                    <img src="./src/images/yellow.jpg" alt="Jadoo accent"
+                        class="absolute right-1 transform mt-3 w-[30px] h-[13px] md:w-[35px] md:h-[15px] lg:w-[39px] lg:h-[17.5px] z-10" />
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 z-50">
+                    <span class="w-6 h-0.5 bg-[#212832] transition-all"></span>
+                    <span class="w-6 h-0.5 bg-[#212832] transition-all"></span>
+                    <span class="w-6 h-0.5 bg-[#212832] transition-all"></span>
+                </button>
+
+                <!-- Primary Nav - Desktop -->
+                <div id="nav-menu" class="hidden lg:flex gap-[59px]">
+                    <nav class="lg:flex items-center font-normal text-[17px] gap-x-16 text-[#212832] font-sans">
+                        <a href="#" class="hover:text-primary">Destinations</a>
+                        <a href="#" class="hover:text-primary">Hotels</a>
+                        <a href="#" class="hover:text-primary">Flights</a>
+                        <a href="#" class="hover:text-primary">Bookings</a>
+                    </nav>
+                    <div class="flex items-center gap-[50px]">
+                        <a href="#" class="text-text-dark hover:text-primary font-medium ml-6">Login</a>
+                        <a href="#"
+                            class="px-5 py-2 text-text-dark border-[1px] font-medium border-text-dark rounded-md hover:bg-primary hover:text-white hover:border-primary">Sign
+                            up</a>
+                        <button class="flex items-center space-x-1 text-text-dark font-medium">
+                            <span>EN</span>
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.5 0.5L5 5L9.5 0.5" stroke="#212832" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu"
+                    class="hidden lg:hidden fixed top-[70px] md:top-[90px] left-0 right-0 bg-white shadow-xl z-[100] px-6 py-6 max-h-[calc(100vh-90px)] overflow-y-auto transition-all duration-300">
+                    <nav class="flex flex-col gap-3 mb-6">
+                        <a href="#"
+                            class="hover:text-primary text-[#212832] font-normal text-base py-2 border-b border-gray-100">Destinations</a>
+                        <a href="#"
+                            class="hover:text-primary text-[#212832] font-normal text-base py-2 border-b border-gray-100">Hotels</a>
+                        <a href="#"
+                            class="hover:text-primary text-[#212832] font-normal text-base py-2 border-b border-gray-100">Flights</a>
+                        <a href="#"
+                            class="hover:text-primary text-[#212832] font-normal text-base py-2 border-b border-gray-100">Bookings</a>
+                    </nav>
+                    <div class="flex flex-col gap-3 pt-4 border-t border-gray-300">
+                        <a href="#" class="text-text-dark hover:text-primary font-medium py-2 text-center">Login</a>
+                        <a href="#"
+                            class="px-5 py-3 text-center text-text-dark border-[1px] font-medium border-text-dark rounded-md hover:bg-primary hover:text-white hover:border-primary">Sign
+                            up</a>
+                        <button class="flex items-center justify-center space-x-1 text-text-dark font-medium py-2">
+                            <span>EN</span>
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.5 0.5L5 5L9.5 0.5" stroke="#212832" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- hero section -->
+            <section
+                class="container mx-auto px-4 md:px-6 lg:px-12 xl:px-20 pt-6 md:pt-8 lg:pt-16 pb-12 md:pb-16 lg:pb-24">
+                <div class="relative flex flex-col lg:flex-row items-center">
+                    <!-- Left Content -->
+                    <div
+                        class="max-w-[700px]  lg:h-[535] lg:-top-8 relative text-center md:text-center lg:text-left px-4 md:px-8 lg:pl-[72px] lg:pr-0">
+                        <p class="font-bold text-primary text-sm md:text-lg lg:text-xl uppercase mb-4 md:mb-5 lg:mb-6">
+                            Best Destinations around the world</p>
+                        <h1
+                            class="font-volkhov max-w-[900px] text-3xl  lg:text-[84px] text-text-dark font-bold leading-tight md:leading-tight lg:leading-[89px] mb-6 md:mb-7 lg:mb-8 relative">
+                            Travel, <span class="relative inline-block">enjoy<img src="./src/images/orange_line.jpg"
+                                    class="hidden lg:block absolute top-20 left-12 -z-10 scale-x-[1.75] scale-y-150"
+                                    style="width: 650px;" /><img src="./src/images/orange_line.jpg"
+                                    class="lg:hidden absolute -bottom-1 left-0 right-0 -z-10 w-full h-2" /></span> and
+                            live a new and full life
+                        </h1>
+                        <p
+                            class="text-text-light font-normal text-sm md:text-base lg:text-[16px] leading-6 md:leading-7 lg:leading-8 max-w-sm md:max-w-md mx-auto lg:mx-0 mb-6 md:mb-8 lg:mb-9">
+                            Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it
+                            engrossed listening. Park gate sell they west hard for the.
+                        </p>
+                        <div
+                            class="flex flex-col md:flex-row justify-center lg:justify-start items-center gap-4 md:gap-6 w-full md:w-auto lg:w-[415px] lg:h-[60px]">
+                            <a href="#"
+                                class="w-full md:w-[170px] h-[50px] md:h-[60px] lg:h-[60px] px-6 py-3 md:py-4 bg-secondary text-white rounded-lg shadow-button font-medium hover:bg-yellow-600 transition-colors flex items-center justify-center min-w-40">Find
+                                out more</a>
+                            <div class="flex items-center gap-3 md:gap-4 lg:space-x-4 cursor-pointer group">
+                                <div class="relative">
+                                    <div
+                                        class="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-full shadow-play flex items-center justify-center relative left-2">
+                                        <svg width="12" height="12" viewBox="0 0 15 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" class="md:w-[15px] md:h-[15px]">
+                                            <path d="M15 7.5L0 14.2265L0 0.773505L15 7.5Z" fill="white" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <span
+                                    class="text-text-light text-sm md:text-base lg:w-[165px] group-hover:text-primary font-poppins font-normal whitespace-nowrap">Play
+                                    Demo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Content - Desktop -->
+                    <div
+                        class="hidden lg:block lg:w-1/2 mt-12 lg:mt-0 w-[765px] h-[764px] top-[105px] left-[565px] -translate-x-8 ">
+                        <img src="https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/c8df/a631/2c2d8ae9f9373b8ebeb680371e67d3a1?Expires=1760313600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=WaMO7ktnuS8mgg58mmsJmiKrISfn1jzE5BztvI-cZkXcTB~pLuikXK8IWvIlzW9I7K5oMeaGhd~~W3a4dxU~DZOUbOwrn55SOKvUWxunYkX4SumXApP0zztbwR0QxOT1Z-uBoUiPP1tUqSkh0Rxyx5os25ne~phvaIlqpD~CPwAlsvDsSFwkopTQ8tYLpADYOaoCReybaVuQXRjqOa37Cn7VTGBfPaMIMu1UD7ADbYPGNd8Wq~d2Ao24VI4jTM9vcEJofUWGTCS0KFXL34RMBEDY~2X509Ki8--RMdFtLqQErmkHxK~U-O63PIB4JsucQ0onJPBiwMUzYXacjr0Pow__"
+                            alt="Traveller" class="relative right-[101px] scale-110" />
+                    </div>
+                    <!-- Right Content - Mobile/Tablet -->
+                    <div class="lg:hidden w-full max-w-md mx-auto md:max-w-lg mt-8 md:mt-12">
+                        <img src="https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/c8df/a631/2c2d8ae9f9373b8ebeb680371e67d3a1?Expires=1760313600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=WaMO7ktnuS8mgg58mmsJmiKrISfn1jzE5BztvI-cZkXcTB~pLuikXK8IWvIlzW9I7K5oMeaGhd~~W3a4dxU~DZOUbOwrn55SOKvUWxunYkX4SumXApP0zztbwR0QxOT1Z-uBoUiPP1tUqSkh0Rxyx5os25ne~phvaIlqpD~CPwAlsvDsSFwkopTQ8tYLpADYOaoCReybaVuQXRjqOa37Cn7VTGBfPaMIMu1UD7ADbYPGNd8Wq~d2Ao24VI4jTM9vcEJofUWGTCS0KFXL34RMBEDY~2X509Ki8--RMdFtLqQErmkHxK~U-O63PIB4JsucQ0onJPBiwMUzYXacjr0Pow__"
+                            alt="Traveller" class="w-full h-auto" />
+                    </div>
+                </div>
+            </section>
+            <!-- Services Section -->
+            <section
+                class="container mx-auto px-4 md:px-6 lg:px-12 xl:px-20 py-12 md:py-16 lg:py-24 relative md:scale-95 lg:scale-95 md:-top-16 lg:-top-32">
+                <div class="text-center mb-8 md:mb-12 lg:mb-0">
+                    <p class="text-base md:text-lg lg:text-[18px] text-text-light font-semibold font-poppins">CATEGORY
+                    </p>
+                    <h2
+                        class="font-volkhov text-3xl md:text-4xl lg:text-[50px] text-text-heading font-bold mt-2 mb-8 md:mb-12 lg:mb-16">
+                        We Offer Best Services</h2>
+                </div>
+
+                <div class="flex flex-col items-center md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+
+                    <!-- Calculated Weather Card -->
+                    <div class="relative text-center p-6 md:p-8 w-full max-w-sm md:max-w-none md:mt-0">
+                        <div class="relative z-10 flex flex-col items-center justify-center h-full">
+                            <img src="./src/images/calculate-weather.png" alt="Calculated Weather"
+                                class="h-12 md:h-16 mb-4 md:mb-6 scale-125" />
+                            <h3
+                                class="text-lg md:text-xl text-text-dark font-semibold mb-3 md:mb-4 md:relative md:top-4">
+                                Calculated Weather</h3>
+                            <p
+                                class="text-text-light text-sm md:text-base leading-relaxed md:relative md:top-3 font-normal max-w-[181px] mx-auto">
+                                Built Wicket longer admire do barton vanity itself do in it.</p>
+                        </div>
+                    </div>
+
+                    <!-- Best Flights Card (Active) -->
+                    <div class="relative text-center p-6 md:p-8 w-full max-w-sm md:max-w-none md:mt-12">
+                        <div class="relative z-10 flex flex-col items-center justify-center h-full">
+                            <img src="./src/images/flight-air.png" alt="Best Flights"
+                                class="relative md:-top-6 h-20 md:h-24 mb-4 md:mb-6 scale-150" />
+                            <h3
+                                class="text-lg md:text-xl text-text-dark font-semibold mb-3 md:mb-4 md:relative md:-top-6">
+                                Best Flights</h3>
+                            <p
+                                class="text-text-light text-sm md:text-base leading-relaxed md:relative md:-top-6 font-normal max-w-[181px] mx-auto">
+                                Engrossed listening. Park gate sell they west hard for the.</p>
+                        </div>
+                        <div class="absolute -bottom-8 -left-8 -z-0 hidden md:block">
+                            <div class="w-24 h-24 bg-primary rounded-tl-3xl rounded-br-lg"></div>
+                        </div>
+                        <div class="absolute inset-0 bg-white rounded-3xl shadow-card z-0"></div>
+                    </div>
+
+                    <!-- Local Events Card -->
+                    <div class="relative text-center p-6 md:p-8 w-full max-w-sm md:max-w-none md:mt-0">
+                        <div class="relative z-10 flex flex-col items-center justify-center h-full">
+                            <img src="./src/images/mic.png" alt="Local Events"
+                                class="h-12 md:h-16 mb-4 md:mb-6 scale-110 md:relative md:top-2" />
+                            <h3
+                                class="text-lg md:text-xl text-text-dark font-semibold mb-3 md:mb-4 md:relative md:top-4">
+                                Local Events</h3>
+                            <p
+                                class="text-text-light text-sm md:text-base leading-relaxed md:relative font-normal max-w-[181px] mx-auto md:top-4">
+                                Barton vanity itself do in it. Preferd to men it engrossed listening.</p>
+                        </div>
+                    </div>
+
+                    <!-- Customization Card -->
+                    <div class="relative text-center p-6 md:p-8 w-full max-w-sm md:max-w-none md:mt-0">
+                        <div class="relative z-10 flex flex-col items-center justify-center h-full">
+                            <img src="./src/images/setting.png" alt="Customization"
+                                class="h-12 md:h-16 mb-4 md:mb-6 scale-110" />
+                            <h3
+                                class="text-lg md:text-xl text-text-dark font-semibold mb-3 md:mb-4 md:relative md:top-4">
+                                Customization</h3>
+                            <p
+                                class="text-text-light text-sm md:text-base leading-relaxed md:relative font-normal max-w-[181px] mx-auto md:top-4">
+                                We deliver outsourced aviation services for military customers.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <img src="./src/images/star.png" alt="star"
+                    class="absolute top-24 right-10 w-36 -z-10 hidden lg:block" />
+            </section>
+
+            <!-- Destinations Section -->
+            <section
+                class="container mx-auto px-4 md:px-6 lg:px-12 xl:px-20 py-12 md:py-16 lg:py-24 relative md:scale-90 lg:scale-75 md:-top-32 lg:-top-60">
+                <div class="text-center mb-8 md:mb-12 lg:mb-0">
+                    <p class="text-base md:text-lg text-text-light font-semibold md:scale-110 lg:scale-125">Top Selling
+                    </p>
+                    <h2
+                        class="relative md:top-3 lg:top-5 font-volkhov text-3xl md:text-4xl lg:text-[50px] text-text-heading md:scale-110 lg:scale-125 font-bold mt-2 mb-8 md:mb-12 lg:mb-16">
+                        Top Destinations</h2>
+                </div>
+
+                <div
+                    class="flex flex-col items-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12 md:scale-105 lg:scale-105 md:scale-y-110 lg:scale-y-125 md:relative md:right-2 lg:right-4">
+
+                    <!-- Rome, Italy Card -->
+                    <div
+                        class="shadow-card rounded-3xl overflow-hidden w-full max-w-sm md:max-w-none md:relative md:top-10 lg:top-20">
+                        <div class="overflow-hidden h-64 md:h-80 lg:h-96">
+                            <img src="https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/32e1/459a/e49e57046b9c9bf320fe245919168bb0?Expires=1760313600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=KUzHysBhwZj0fRkJB9RjLN6siYZLhyS91NKUZmvJuT~RMuNoeGjtHd6eYvxaE5wmlD4CTFyNmhFkWAzfJbD1C6SGWMqrJuETz9O~8pCftE6poMZdSso7Gq6g6xmT8AT6Gr3yqCiR3falAgSoQVpVCv4IcGJG7-phad~eSv03FJfS0rCfzvKvhNrGcYiOUxwlQ5-dyDSpnKeVhGUfPOJ6r8N~DJOiiN5lXFsUL98OWCsUFkShsjUHrc9LzNh-meN0Y~DMx6LkyJsL-G34oSKJJBi4JHQ4vLhA0VB5SwKSsq9okK3qs3ofaZdrP8ZJHpsE2fyrqYNCA17ua3v5DJs03g__"
+                                alt="Rome, Italy" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="p-4 md:p-5 lg:p-6 bg-white">
+                            <div
+                                class="flex justify-between items-center text-text-light text-sm md:text-base mb-3 md:mb-4">
+                                <p>Rome, Italy</p>
+                                <p>$5,42k</p>
+                            </div>
+                            <div class="flex items-center space-x-2 md:space-x-3 text-text-light text-sm md:text-base">
+                                <img src="./src/images/navigation.png" alt="navigation" class="w-4 h-4 md:w-5 md:h-5" />
+                                <span>10 Days Trip</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- London, UK Card -->
+                    <div
+                        class="shadow-card rounded-3xl overflow-hidden w-full max-w-sm md:max-w-none md:relative md:top-10 lg:top-20">
+                        <div class="overflow-hidden h-64 md:h-80 lg:h-96">
+                            <img src="https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/599d/5437/ff6f71a7522170940c3ac66332ac8d2f?Expires=1760313600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=d79MH4bYP2bdrL1anAHNbNq-ai~9bYZeQVoyv2syOOP9YOef8D69ylZbRLHeSyrZbdLHtpA2wsaYpjk6j5ydbcjpmGxWjzmj3oJ4cBiCVpED28OIyc0jEU~H-O6QFEkmVnp5C-z4VkqF5UXh8YcNLLwAJmh983I6DCb2y~LkUwPLX7V40tKjTI73zp0bAY2tt~qCIpzpWTqFkI3jwwRaclKHawpesirxvPih3uZAv8VGb775Wd3HiWPZCYsKVoYfMh-F6OfeEXWP5GeNKVWpFBgDnmpuSqO7Lz6GnKC6e~B-Nv-6rneC4VammMVre9IUzL--aRz9jWYrgNRbkpUXGA__"
+                                alt="London, UK" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="p-4 md:p-5 lg:p-6 bg-white">
+                            <div
+                                class="flex justify-between items-center text-text-light text-sm md:text-base mb-3 md:mb-4">
+                                <p>London, UK</p>
+                                <p>$4.2k</p>
+                            </div>
+                            <div class="flex items-center space-x-2 md:space-x-3 text-text-light text-sm md:text-base">
+                                <img src="./src/images/navigation.png" alt="navigation" class="w-4 h-4 md:w-5 md:h-5" />
+                                <span>12 Days Trip</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Full Europe Card -->
+                    <div
+                        class="shadow-card rounded-3xl overflow-hidden w-full max-w-sm md:max-w-none md:ml-0 lg:ml-8 md:relative md:top-10 lg:top-20">
+                        <div class="overflow-hidden h-64 md:h-80 lg:h-96">
+                            <img src="https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/1119/f8e8/79b2e4cb46bd33155639a62530f9a579?Expires=1760313600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=A8Le~2dEUhH1SJmC3IqmD-qY5YytoeOg5UKfxThlxR18ep5FbPA2kvkDc~t4vn0u6utZeARSZQ87GZyFLcVG72KgKFuJbdFTDBoKzCCIAFKu2ReXYHHCcua-TXLQHJiVBrwyP0DhvIi8gx30ZcpsJBBQBy0sLhX7A7FuVwN5MNxXWsj3cmTGEXAGa1YUQZ6dj8dLy7xFkONT8DEyF0N0hSVxBF9sUlHLJ76KV9XkkQJkslMgpuCCCASun2qLpySCsMzxqvCcCZBTIvT8rP44IzEtTfMqeGqtHbGBp6n6W7J44jrc3Qk-0ulApppry8EPDU0QCapFbb0A5v1Wo0ZeLQ__"
+                                alt="Full Europe" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="p-4 md:p-5 lg:p-6 bg-white">
+                            <div
+                                class="flex justify-between items-center text-text-light text-sm md:text-base mb-3 md:mb-4">
+                                <p>Full Europe</p>
+                                <p>$15k</p>
+                            </div>
+                            <div class="flex items-center space-x-2 md:space-x-3 text-text-light text-sm md:text-base">
+                                <img src="./src/images/navigation.png" alt="navigation" class="w-4 h-4 md:w-5 md:h-5" />
+                                <span>28 Days Trip</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <img src="./src/images/destination_decore.png" alt="destionation decore"
+                    class="absolute bottom-0 -right-11 w-[96px] scale-125 h-[252px] -z-10 hidden lg:block" />
+            </section>
+
+            <!-- Booking Section -->
+            <section
+                class="container mx-auto px-4 md:px-6 lg:px-12 xl:px-20 py-12 md:py-16 lg:py-24 relative md:-top-32 lg:-top-52 md:left-0 lg:left-[160px]">
+                <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-0">
+                    <!-- Left Content -->
+                    <div class="w-full lg:w-auto text-center lg:text-left">
+                        <p class="text-base md:text-lg text-text-light font-semibold font-poppins">Easy and Fast</p>
+                        <h2
+                            class="font-volkhov text-3xl md:text-4xl lg:text-[50px] text-text-heading font-bold mt-2 mb-6 md:mb-8 max-w-full md:max-w-[500px] lg:max-w-[500px] mx-auto lg:mx-0">
+                            Book your next trip In 3 easy steps</h2>
+                        <div class="space-y-6 md:space-y-8 max-w-md mx-auto lg:mx-0">
+
+                            <!-- Step 1: Choose Destination -->
+                            <div class="flex items-start space-x-4 md:space-x-6 max-w-full md:max-w-[400px]">
+                                <div
+                                    class="w-[40px] h-[40px] md:w-[47px] md:h-[48px] bg-yellow-400 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <img src="./src/images/choose_destination.png" alt="Choose Destination"
+                                        class="w-[40px] h-[40px] md:w-[47px] md:h-[48px] object-contain" />
+                                </div>
+                                <div class="text-left">
+                                    <h3 class="font-poppins font-bold text-[#5E6282] text-sm md:text-base mb-1">Choose
+                                        Destination</h3>
+                                    <p class="text-[#5E6282] font-poppins text-sm md:text-[16px] leading-relaxed">Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Make Payment -->
+                            <div class="flex items-start space-x-4 md:space-x-6 max-w-full md:max-w-[400px]">
+                                <div
+                                    class="w-[40px] h-[40px] md:w-[47px] md:h-[48px] bg-red-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <img src="./src/images/make_payment.png" alt="Make Payment"
+                                        class="w-[40px] h-[40px] md:w-[47px] md:h-[48px] object-contain" />
+                                </div>
+                                <div class="text-left">
+                                    <h3 class="font-poppins font-bold text-[#5E6282] text-sm md:text-base mb-1">Make
+                                        Payment</h3>
+                                    <p class="text-[#5E6282] font-poppins text-sm md:text-[16px] leading-relaxed">Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Reach Airport -->
+                            <div class="flex items-start space-x-4 md:space-x-6 max-w-full md:max-w-[400px]">
+                                <div
+                                    class="w-[40px] h-[40px] md:w-[47px] md:h-[48px] bg-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <img src="./src/images/Reach_airport.png" alt="Reach Airport"
+                                        class="w-[40px] h-[40px] md:w-[47px] md:h-[48px] object-contain" />
+                                </div>
+                                <div class="text-left">
+                                    <h3 class="font-poppins font-bold text-[#5E6282] text-sm md:text-base mb-1">Reach
+                                        Airport on Selected Date</h3>
+                                    <p class="text-[#5E6282] font-poppins text-sm md:text-[16px] leading-relaxed">Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Right Content - Desktop -->
+                    <div class="hidden lg:flex lg:w-1/2 relative justify-center top-8 right-[26px]">
+                        <!-- Blue Ellipse Background -->
+                        <div
+                            class="absolute w-[354px] h-[367px] bg-[#59B1E6] rounded-full opacity-30 blur-2xl -z-10 bottom-20 right-24">
+                        </div>
+                        <div class="w-96 bg-white shadow-card rounded-3xl p-6 relative">
+                            <img src="https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/bdc4/e9e7/98bb7e15ae87fe31c13c5b3cc6d31461?Expires=1760313600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=e5D9~HTSFtcrVi33Z~W-0jc5~3oGtMi1n2gA~0qrrsZHIqWcPASo-MHERzqDGEIPsPS9ivfBaObYvaGtwsdbdm~vvpod8I6zGHfALX-arx6K3TYXlNZfwWDbNd8KbAB1KP5jLXAKdYp6bYjljLLOXC-Tm3PPxzwOrAmrdNNmeiCHszduslKa2m0mSeHGldwdcOUuG0GFaCeEcGOQSQVika2kyCdrAlKc6DQrgPTCJyyoKk6cuwbVjHTAP4GsRUTLWprP-x236ZE8AbGihLYLKTiJq5J4IbNVIpN-CEobEN-o0RFeDTgeriyImd-Sy9xmZHmXgczzVRmU~5Pxo9nJoQ__"
+                                alt="Trip to Greece" class="rounded-3xl w-full h-40 object-cover" />
+                            <h3 class="mt-6 text-lg text-[#080809] font-normal font-poppins">Trip To Greece</h3>
+                            <div class="flex items-center text-[#84829A] mt-3 font-poppins font-normal text-[16px]">
+                                <p>14-29 June</p>
+                                <div class="w-px h-4 bg-gray-300 mx-4"></div>
+                                <p>by Robbin joseph</p>
+                            </div>
+                            <div class="flex space-x-4 my-5">
+                                <div class="w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center">
+                                    <img src="./src/images/LEAF.png" alt="Leaf"
+                                        class="w-[36px] h-[36px] object-contain" />
+                                </div>
+                                <div class="w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center">
+                                    <img src="./src/images/map.png" alt="Map"
+                                        class="w-[36px] h-[36px] object-contain scale-50" />
+                                </div>
+                                <div class="w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center">
+                                    <img src="./src/images/send.png" alt="Send"
+                                        class="w-[36px] h-[36px] object-contain scale-50" />
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <p class="text-text-light flex items-center gap-2">
+                                    <img src="./src/images/building.png" alt="Building"
+                                        class="w-[16px] h-[16px] object-contain" />
+                                    24 people going
+                                </p>
+                                <div class="w-8 h-8 flex items-center justify-center">
+                                    <img src="./src/images/heart.png" alt="Heart"
+                                        class="w-[20px] h-[18.58px] object-contain" />
+                                </div>
+                            </div>
+                            <!--  info section -->
+                            <div
+                                class="absolute bottom-16 w-[263px] -right-[115px] bg-white shadow-card rounded-2xl p-4 hidden lg:block">
+                                <div class="flex items-start space-x-3 relative">
+                                    <img src="https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/4f1a/c6b9/9571c17f5174483992ddbfb998e97efe?Expires=1760313600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=OZP4dRQaUO0l-yyBbkqDVvC823JqXyYt5fJRxT6llA2Uw31sMBoN5Y6RQ-1oPnn6O3CPhjCL-ecvE~WrUPG5RklKV7vSXMQmgaCQhgVQQTv2cF2RCurGHNIa6ewblVMS7zBiLcdMf4dwlewJ4mGa4-esH9g7n~Fh2d9r10WbtMORhVzNpsZAbaoxwt4lhVCsQvFSOIYtarzBht2dTgcLBn1Wmh0uUIQyGjtpgpjBWv-u6jPDV7DXRovC-syhiT1SMVj1-c25seaQW1L71TUuywQsfMyNsGOzT95VSttD2wpN1y-66wEQSofSV2arWjdJIUylRsiaWTeTIgja-TEB5g__"
+                                        alt="Ongoing trip" class="w-12 h-12 rounded-full object-cover" />
+                                    <div>
+                                        <p class="text-sm font-normal font-poppins text-[#84829A]">Ongoing</p>
+                                        <p class="text-lg font-normal font-poppins mt-1 text-[#080809]">Trip to rome</p>
+                                        <img src="./src/images/40_completed.png" alt="40% completed" class="mt-2" />
+                                        <div class="flex items-center gap-0 mt-2">
+                                            <img src="./src/images/purple_line.png" alt="Progress"
+                                                class="w-[73px] h-[5px]" />
+                                            <img src="./src/images/whiteline.png" alt="Remaining"
+                                                class="w-[93px] h-[5px]" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Content - Mobile/Tablet -->
+                    <div class="lg:hidden w-full relative flex flex-col items-center gap-4">
+                        <div
+                            class="absolute w-[280px] h-[290px] md:w-[320px] md:h-[330px] bg-[#59B1E6] rounded-full opacity-30 blur-2xl -z-10 bottom-16 right-16">
+                        </div>
+                        <div class="w-full max-w-sm bg-white shadow-card rounded-3xl p-5 md:p-6 relative">
+                            <img src="https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/bdc4/e9e7/98bb7e15ae87fe31c13c5b3cc6d31461?Expires=1760313600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=e5D9~HTSFtcrVi33Z~W-0jc5~3oGtMi1n2gA~0qrrsZHIqWcPASo-MHERzqDGEIPsPS9ivfBaObYvaGtwsdbdm~vvpod8I6zGHfALX-arx6K3TYXlNZfwWDbNd8KbAB1KP5jLXAKdYp6bYjljLLOXC-Tm3PPxzwOrAmrdNNmeiCHszduslKa2m0mSeHGldwdcOUuG0GFaCeEcGOQSQVika2kyCdrAlKc6DQrgPTCJyyoKk6cuwbVjHTAP4GsRUTLWprP-x236ZE8AbGihLYLKTiJq5J4IbNVIpN-CEobEN-o0RFeDTgeriyImd-Sy9xmZHmXgczzVRmU~5Pxo9nJoQ__"
+                                alt="Trip to Greece" class="rounded-3xl w-full h-32 md:h-40 object-cover" />
+                            <h3 class="mt-4 md:mt-6 text-base md:text-lg text-[#080809] font-normal font-poppins">Trip
+                                To Greece</h3>
+                            <div
+                                class="flex items-center text-[#84829A] mt-2 md:mt-3 font-poppins font-normal text-sm md:text-[16px]">
+                                <p>14-29 June</p>
+                                <div class="w-px h-4 bg-gray-300 mx-3 md:mx-4"></div>
+                                <p>by Robbin joseph</p>
+                            </div>
+                            <div class="flex space-x-3 md:space-x-4 my-4 md:my-5">
+                                <div
+                                    class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-gray-200 flex items-center justify-center">
+                                    <img src="./src/images/LEAF.png" alt="Leaf"
+                                        class="w-[32px] h-[32px] md:w-[36px] md:h-[36px] object-contain" />
+                                </div>
+                                <div
+                                    class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-gray-200 flex items-center justify-center">
+                                    <img src="./src/images/map.png" alt="Map"
+                                        class="w-[32px] h-[32px] md:w-[36px] md:h-[36px] object-contain scale-50" />
+                                </div>
+                                <div
+                                    class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-gray-200 flex items-center justify-center">
+                                    <img src="./src/images/send.png" alt="Send"
+                                        class="w-[32px] h-[32px] md:w-[36px] md:h-[36px] object-contain scale-50" />
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <p class="text-text-light flex items-center gap-2 text-sm md:text-base">
+                                    <img src="./src/images/building.png" alt="Building"
+                                        class="w-[14px] h-[14px] md:w-[16px] md:h-[16px] object-contain" />
+                                    24 people going
+                                </p>
+                                <div class="w-7 h-7 md:w-8 md:h-8 flex items-center justify-center">
+                                    <img src="./src/images/heart.png" alt="Heart"
+                                        class="w-[18px] h-[17px] md:w-[20px] md:h-[18.58px] object-contain" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Info section for Mobile/Tablet -->
+                        <div class="w-full max-w-sm bg-white shadow-card rounded-2xl p-4 md:p-5">
+                            <div class="flex items-start space-x-3 relative">
+                                <img src="https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/4f1a/c6b9/9571c17f5174483992ddbfb998e97efe?Expires=1760313600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=OZP4dRQaUO0l-yyBbkqDVvC823JqXyYt5fJRxT6llA2Uw31sMBoN5Y6RQ-1oPnn6O3CPhjCL-ecvE~WrUPG5RklKV7vSXMQmgaCQhgVQQTv2cF2RCurGHNIa6ewblVMS7zBiLcdMf4dwlewJ4mGa4-esH9g7n~Fh2d9r10WbtMORhVzNpsZAbaoxwt4lhVCsQvFSOIYtarzBht2dTgcLBn1Wmh0uUIQyGjtpgpjBWv-u6jPDV7DXRovC-syhiT1SMVj1-c25seaQW1L71TUuywQsfMyNsGOzT95VSttD2wpN1y-66wEQSofSV2arWjdJIUylRsiaWTeTIgja-TEB5g__"
+                                    alt="Ongoing trip"
+                                    class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover flex-shrink-0" />
+                                <div class="flex-1">
+                                    <p class="text-xs md:text-sm font-normal font-poppins text-[#84829A]">Ongoing</p>
+                                    <p class="text-base md:text-lg font-normal font-poppins mt-1 text-[#080809]">Trip to
+                                        rome</p>
+                                    <img src="./src/images/40_completed.png" alt="40% completed"
+                                        class="mt-2 w-auto h-auto" />
+                                    <div class="flex items-center gap-0 mt-2">
+                                        <img src="./src/images/purple_line.png" alt="Progress"
+                                            class="w-[60px] md:w-[73px] h-[5px]" />
+                                        <img src="./src/images/whiteline.png" alt="Remaining"
+                                            class="w-[76px] md:w-[93px] h-[5px]" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section
+                class="container mx-auto px-4 md:px-6 lg:px-12 xl:px-20 py-12 md:py-16 lg:py-24 relative md:left-0 lg:left-[162px] md:-top-32 lg:-top-[255px]">
+                <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16">
+                    <!-- Left Content -->
+                    <div
+                        class="w-full lg:w-1/2 text-center lg:text-left max-w-full md:max-w-[450px] mx-auto lg:mx-0 relative lg:-top-7">
+                        <p class="text-base md:text-lg text-[#5E6282] font-semibold uppercase mb-2 md:mb-[10px]">
+                            Testimonials</p>
+                        <h2
+                            class="font-volkhov text-3xl md:text-4xl lg:text-[50px] text-text-heading font-bold mt-2 mb-8 md:mb-10 lg:mb-12 leading-tight">
+                            What People Say <p class="relative top-1">About Us.</p>
+                        </h2>
+                        <div class="flex justify-center lg:justify-start">
+                            <img src="./src/images/dots.png" alt="Pagination dots"
+                                class="w-[70px] h-[10px] md:w-[87px] md:h-[12px] object-contain relative md:top-6" />
+                        </div>
+                    </div>
+                    <!-- Right Content - Desktop -->
+                    <div class="hidden lg:block lg:w-1/2 relative left-4 top-9">
+                        <div class="relative h-72">
+                            <div class="absolute top-8 left-0 w-full max-w-lg z-10">
+                                <div class="relative bg-white shadow-card rounded-[10px] p-6">
+                                    <img src="https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/e80f/e77c/f12d2a9344e78260608e66ef5c8f6e9a?Expires=1760313600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=n-Xp7917Kzc0CJUIFXO4XGApkhfIQkh7XAILc6UR3RC-mx-9UzT2UgvKsp7NN2Rtb-DwkcWJcOBuTJyKlinjjP-Yxs~ZYBewJBqPcSwVeX9cqFZkWvNDTv82465A~f6I3dxzJsQ08vFAKuxoC5uD3xDa0~AosLFfOgMck7CU6VNGmS7GaNSXwVKIvXERPCbpYjZj2MDEyPEUR4ATV-8WCFHOlkVSMRjifNrvKm75zj2DYoK3gdzHFdcGThiNAsbJ2DlBiI5oAasAWYmYFbKfR6MBlu--KGnsn4pbO3jLnfbCRWCSCVwSqIXC470AqY06TXH18AwVuDCf3U08zWdN9w__"
+                                        alt="Mike taylor"
+                                        class="absolute -top-8 scale-105 -left-10 w-16 h-16 rounded-full object-cover border-2 border-white" />
+                                    <p class="text-text-light leading-loose font-poppins font-normal text-[16px]">"On
+                                        the Windows talking painted pasture yet its express parties use. Sure last upon
+                                        he same as knew next. Of believed or diverted no."</p>
+                                    <h3 class="text-lg text-text-light font-semibold mt-7 font-poppins text-[18px]">Mike
+                                        taylor</h3>
+                                    <p class="text-sm text-text-light mb-1 font-poppins text-[14px]">Lahore, Pakistan
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="absolute top-[112px] left-11 w-full max-w-lg opacity-50 rounded-[10px]">
+                                <div class="relative bg-white border-2 border-[#F7F7F7] rounded-xl p-6">
+                                    <p class="text-text-light leading-loose">"On the Windows talking painted pasture yet
+                                        its express parties use. Sure last upon he same as knew next. Of believed or
+                                        diverted no."</p>
+                                    <h3 class="text-lg text-text-light font-semibold mt-6 font-poppins">Chris Thomas
+                                    </h3>
+                                    <p class="text-sm text-text-light">CEO of Red Button</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative left-[620px] bottom-[156px] lg:-right-16">
+                            <img src="./src/images/Pagination.png" alt="Pagination controls" class="object-contain" />
+                        </div>
+                    </div>
+
+                    <!-- Right Content - Mobile/Tablet -->
+                    <div class="lg:hidden w-full flex flex-col items-center">
+                        <div class="w-full max-w-lg">
+                            <div class="relative bg-white shadow-card rounded-[10px] p-5 md:p-6">
+                                <img src="https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/e80f/e77c/f12d2a9344e78260608e66ef5c8f6e9a?Expires=1760313600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=n-Xp7917Kzc0CJUIFXO4XGApkhfIQkh7XAILc6UR3RC-mx-9UzT2UgvKsp7NN2Rtb-DwkcWJcOBuTJyKlinjjP-Yxs~ZYBewJBqPcSwVeX9cqFZkWvNDTv82465A~f6I3dxzJsQ08vFAKuxoC5uD3xDa0~AosLFfOgMck7CU6VNGmS7GaNSXwVKIvXERPCbpYjZj2MDEyPEUR4ATV-8WCFHOlkVSMRjifNrvKm75zj2DYoK3gdzHFdcGThiNAsbJ2DlBiI5oAasAWYmYFbKfR6MBlu--KGnsn4pbO3jLnfbCRWCSCVwSqIXC470AqY06TXH18AwVuDCf3U08zWdN9w__"
+                                    alt="Mike taylor"
+                                    class="absolute -top-8 scale-105 -left-6 md:-left-10 w-14 h-14 md:w-16 md:h-16 rounded-full object-cover border-2 border-white" />
+                                <p
+                                    class="text-text-light leading-relaxed md:leading-loose font-poppins font-normal text-sm md:text-[16px]">
+                                    "On the Windows talking painted pasture yet its express parties use. Sure last upon
+                                    he same as knew next. Of believed or diverted no."</p>
+                                <h3
+                                    class="text-base md:text-lg text-text-light font-semibold mt-5 md:mt-7 font-poppins md:text-[18px]">
+                                    Mike taylor</h3>
+                                <p class="text-xs md:text-sm text-text-light mb-1 font-poppins md:text-[14px]">Lahore,
+                                    Pakistan</p>
+                            </div>
+                            <div class="flex justify-end mt-6 w-full">
+                                <img src="./src/images/Pagination.png" alt="Pagination controls"
+                                    class="object-contain w-auto h-auto relative left-16 -top-40" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Partners Section -->
+            <section
+                class="container mx-auto px-4 md:px-6 lg:px-12 xl:px-20 py-8 md:py-12 lg:py-16 relative md:-top-48 lg:-top-72 md:left-0 lg:left-6">
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-[67px]">
+                    <!-- Logo Card 1 -->
+                    <div>
+                        <img src="https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/5be7/b30f/1023e0bec0dfa8fb71138b45f6a9580f?Expires=1760313600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=B41KF0bF3uWWGyVB4ahJgE63WGBY23S9iXk9XkE7eF1MtmE0GNgDdKAigxMH7Vk2oyAiU6o~Ut6rV3BccBEb40qtYpopzQUIpP8ZgKMQssPXFZOj4DfxY5G0Yr~7WO8UK8vJy6S7hqbp8xWandJbJr-Q5jjfwYgP6Jnrqo0FdQITx-nqnR2r~GxiXhkDf3NPT30n5ahKckjea8BFccgs07-n3WZH-MRzmEUF4EnzbdCFq4KpwGN3xxQm3o9Vf24hxbNbl4d9JPsFx28ebwct4r48JTTdnPHrtAZPiw~rWiW8005qXZGPaRNj3ySIErPTDJqUZ8jV-jgJrSp3XM768w__"
+                            alt="Partner logo"
+                            class="w-[100px] h-[100px] md:w-[115px] md:h-[115px] lg:w-[130px] lg:h-[130px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all" />
+                    </div>
+
+                    <!-- Logo Card 2 -->
+                    <div>
+                        <img src="https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/3e44/cc82/c69df7b9e4b510c71fff0a209463d571?Expires=1760313600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=OlqLHG-09cp6DEnn~kmxjtBOo9e~xqV4N6Nri7LHUdAcZKrqnbNa2iT9GZTk0275ELaNjPwZNg9NTm5bsF42lpD1QpQrkTbJf-Ve9seZjqBWpw4MfrlGyviz7NiywJwSIacovkLCSOtk7R5jfNSLW5a5n4cxFpBrfkymgpkUInGUXI~bn2qBjJjShCjIGmrr4cpJXEmqtux5-HhJnnwvRtMf0Vtm6kkG46nZ-w2ug~oULfYZUltB-JucR3~y6ELFJ7yXFNKf735An1CKV9IO94M1ZIJDvlnycoaX805KyBfge9Y209OIvRU4YO2NncH4Dofi5S2BMzX4I~tRa~UoZw__"
+                            alt="Partner logo"
+                            class="w-[130px] h-[83px] md:w-[150px] md:h-[96px] lg:w-[172.86px] lg:h-[110px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all" />
+                    </div>
+
+                    <!-- Logo Card 3 -->
+                    <div
+                        class="bg-white rounded-[10px] shadow-md hover:shadow-lg transition-shadow p-4 md:p-5 lg:p-6 flex items-center justify-center w-[180px] h-[65px] md:w-[210px] md:h-[75px] lg:w-[241px] lg:h-[86px]">
+                        <img src="./src/images/expedia.png" alt="Partner logo"
+                            class="w-[120px] h-[120px] md:w-[140px] md:h-[140px] lg:w-[162px] lg:h-[162px] object-contain" />
+                    </div>
+
+                    <!-- Logo Card 4 -->
+                    <div>
+                        <img src="https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/93ea/b2e4/591129a0da8f52c9f1a7d572f9687906?Expires=1760313600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ceE8KkCqPRojVurmdQKqHynLoce5LZJIzp2inZR293vhewxvVHWplnAYEp~Oq~CSRP4KwyZQB-~50pcqclwRfcF~4KWHTNm9u02v1SScxyuMMB6qFHDa8j1zRdv7oJ0hfHU0iNo9n46J-k1RuCR5RWLNCYZO7~7QQVqaVufAOdn2lyh3rowuLxUh3kiHD~u8u0ZpTVfi2~mnDOcvKIbckGnRf0GXNA1MOyZF3yhO5awFiqkQQztX6MHMhLhmxpTyh0fxXgAIB52vsbN4UjUyl85jSKoHZQXKnCCWrsIJhdbcj6tlqiCbI8d17eRcLzGPQJHwZngdOYudiR0w1b58EA__"
+                            alt="Partner logo"
+                            class="w-[120px] h-[24px] md:w-[140px] md:h-[28px] lg:w-[162px] lg:h-[32px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all" />
+                    </div>
+
+                    <!-- Logo Card 5 -->
+                    <div>
+                        <img src="https://img-wrapper.vercel.app/image?url=https://s3-alpha-sig.figma.com/img/4f24/65da/fa9cf98505aee683a11cee00c358c509?Expires=1760313600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=K-J~XjSnCBvOTtPkZ5AQjeKuEu4xleqrXMPezSi~FNXJpjvALDt6GTQO1K4z~W7ig9VJ8AwAv8aileyM~OWz91KEpWJNtN12zf6awLEiOxy7eEWkGPWMB73hQF1Ov7ml4~Q5vnU9zEKAguAHSQhXVSazUo04sFuWlqhHs~i~oYkcgJs9Lk6CO-2casIQH-Lg2xyyhVKDKYJsgFGIjv1X4UHLVkXjABJZBV2tnxgQri4kxy55aaUWKUx5waortozxPR0rNGLMT8Y~P8r7V0aAChMkE0vo9ce4sSltUTVEAaMFCRm22bayE0NsBVMC6khOoz~YcFCk2dttUW3BugbSqw__"
+                            alt="Partner logo"
+                            class="w-[70px] h-[16px] md:w-[82px] md:h-[18px] lg:w-[94px] lg:h-[21px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- Subscribe Section - Desktop -->
+            <section
+                class="hidden lg:block container mx-auto px-6 lg:px-12 xl:px-20 py-24 relative -top-[300px] scale-x-[0.85] left-2">
+                <div class="relative bg-light-purple/20 rounded-tl-xl-top rounded-2xl text-center py-20 px-6">
+                    <img src="./src/images/MaskGroup.png"
+                        class="absolute top-[70px] -left-[10px] w-[389.44836425781284px] h-[300.19018554687534px] scale-x-[1.50] scale-y-[1.14]" />
+                    <img src="./src/images/MaskGroup.png"
+                        class="absolute top-11 scale-y-110 -right-8 -rotate-90 w-[389.44836425781284px] h-[300.19018554687534px]" />
+                    <h2
+                        class="text-[33px] text-text-light font-semibold max-w-[900px] mx-auto leading-normal scale-x-[1.15] font-poppins">
+                        Subscribe to get information, latest news and other interesting offers about Jadoo</h2>
+                    <form
+                        class="mt-16 flex flex-col md:flex-row justify-center items-center gap-8 relative left-3 mx-auto sclae-x-[1.15]">
+                        <div class="relative md:w-auto">
+                            <img src="./src/images/msg.png" alt="Email"
+                                class="absolute left-6 top-1/2 -translate-y-1/2 w-[21px] h-[18px] object-contain" />
+                            <input type="email" placeholder="Your email"
+                                class="w-[480px] h-16 bg-white rounded-lg pl-14 pr-4 focus:outline-none focus:ring-2 focus:ring-primary font-montserrat font-normal text-[14px]" />
+                        </div>
+                        <button type="submit"
+                            class="w-[180px] h-[68px] bg-transparent border-0 p-0 hover:opacity-90 transition-opacity relative">
+                            <img src="./src/images/btn.png" alt="Subscribe"
+                                class="w-[180px] h-[64px] object-contain rounded-[10px]" />
+                            <span
+                                class="absolute inset-0 flex items-center justify-center font-sans font-semibold text-white text-[17px]">Subscribe</span>
+                        </button>
+                    </form>
+                    <img src="./src/images/star_second.png" alt="plus decor"
+                        class="absolute -bottom-[68px] scale-x-[1.15] -right-24 w-36 -z-10" />
+                </div>
+                <div
+                    class="absolute top-20 right-[71px] w-[70px] h-[70px] bg-gradient-to-tl from-[#747DEF] to-[#5E3BE1] rounded-full flex items-center justify-center">
+                    <img src="./src/images/send_nav.png" alt="Send"
+                        class="w-[70px] h-[70px] object-contain scale-x-[1.15]" />
+                </div>
+            </section>
+
+            <!-- Subscribe Section - Mobile/Tablet -->
+            <section class="lg:hidden container mx-auto px-4 md:px-6 py-12 md:py-16 relative md:-top-48">
+                <div
+                    class="relative bg-light-purple/20 rounded-2xl text-center py-12 md:py-16 px-4 md:px-6 overflow-hidden">
+                    <h2
+                        class="text-xl md:text-2xl text-text-light font-semibold max-w-full mx-auto leading-normal font-poppins px-4 md:px-0">
+                        Subscribe to get information, latest news and other interesting offers about Jadoo</h2>
+                    <form class="mt-8 md:mt-12 flex flex-col gap-4 md:gap-6 mx-auto">
+                        <div class="relative w-full">
+                            <img src="./src/images/msg.png" alt="Email"
+                                class="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 w-[18px] h-[15px] md:w-[21px] md:h-[18px] object-contain" />
+                            <input type="email" placeholder="Your email"
+                                class="w-full h-14 md:h-16 bg-white rounded-lg pl-12 md:pl-14 pr-4 focus:outline-none focus:ring-2 focus:ring-primary font-montserrat font-normal text-sm md:text-[14px]" />
+                        </div>
+                        <button type="submit"
+                            class="w-full h-[60px] md:h-[64px] bg-transparent border-0 p-0 hover:opacity-90 transition-opacity relative">
+                            <img src="./src/images/btn.png" alt="Subscribe"
+                                class="w-full h-full object-cover rounded-[10px]" />
+                            <span
+                                class="absolute inset-0 flex items-center justify-center font-sans font-semibold text-white text-base md:text-[17px]">Subscribe</span>
+                        </button>
+                    </form>
+
+                </div>
+                <div
+                    class="absolute scale-90 top-8 right-1 md:-top-4 md:-right-4 w-[60px] h-[60px] md:w-[70px] md:h-[70px] bg-gradient-to-tl from-[#747DEF] to-[#5E3BE1] rounded-full flex items-center justify-center z-10">
+                    <img src="./src/images/send_nav.png" alt="Send"
+                        class="scale-125 w-[50px] h-[50px] md:w-[60px] md:h-[60px] object-contain" />
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer
+            class="container mx-auto px-6 md:px-8 lg:px-12 xl:px-20 pt-8 md:pt-12 lg:pt-16 pb-8 relative md:-top-32 lg:-top-[270px] left-0 lg:left-24">
+            <div class="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap mx-auto gap-8 md:gap-10 lg:gap-[65px]">
+                <!-- Jadoo -->
+                <div class="max-w-full md:max-w-[250px] ml-0 md:ml-6 lg:ml-14 text-center md:text-left">
+                    <h3 class="text-3xl md:text-4xl font-medium text-text-dark relative -top-2">Jadoo.</h3>
+                    <p class="text-sm text-text-light mt-4">Book your trip in minute, get full Control for much longer.
+                    </p>
+                </div>
+                <!-- Links -->
+                <div class="flex flex-col md:flex-row gap-8 md:gap-10 lg:gap-[65px] text-center md:text-left">
+                    <div>
+                        <h4 class="text-xl font-bold text-black mb-4 md:mb-6">Company</h4>
+                        <ul class="space-y-3 text-text-light">
+                            <li><a href="#" class="hover:text-primary">About</a></li>
+                            <li><a href="#" class="hover:text-primary">Careers</a></li>
+                            <li><a href="#" class="hover:text-primary">Mobile</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-black mb-4 md:mb-6">Contact</h4>
+                        <ul class="space-y-3 text-text-light">
+                            <li><a href="#" class="hover:text-primary">Help/FAQ</a></li>
+                            <li><a href="#" class="hover:text-primary">Press</a></li>
+                            <li><a href="#" class="hover:text-primary">Affiliates</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-black mb-4 md:mb-6">More</h4>
+                        <ul class="space-y-3 text-text-light">
+                            <li><a href="#" class="hover:text-primary">Airlinefees</a></li>
+                            <li><a href="#" class="hover:text-primary">Airline</a></li>
+                            <li><a href="#" class="hover:text-primary">Low fare tips</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Social & Apps -->
+                <div class="lg:col-span-1 ml-0 md:ml-6 lg:ml-6 text-center md:text-left w-full md:w-auto">
+                    <div class="flex items-center justify-center md:justify-start space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full shadow-md flex items-center justify-center">
+                            <img src="./src/images/facebook.png" class="scale-[1.52]" />
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 shadow-md flex items-center justify-center">
+                            <img src="./src/images/insta.png" class="scale-[1.52]" />
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center">
+                            <img src="./src/images/twitter.png" class="scale-[1.52]" />
+                        </a>
+                    </div>
+                    <p class="text-lg text-text-light my-4">Discover our app</p>
+                    <div class="flex items-center justify-center md:justify-start space-x-2">
+                        <a href="#"><img src="./src/images/Googleplay.png" alt="Google Play" class="h-10" /></a>
+                        <a href="#"><img src="./src/images/AppStore.png" alt="Apple Store" class="h-10" /></a>
+                    </div>
+                </div>
+            </div>
+            <p
+                class="text-center text-sm text-text-light mt-12 md:mt-16 lg:mt-20 relative right-0 lg:right-24 bottom-4">
+                All rights reserved@jadoo.co</p>
+        </footer>
+    </div>
+
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
